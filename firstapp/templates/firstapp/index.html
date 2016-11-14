@@ -6,5 +6,38 @@
   </head>
   <body>
     <h1>index html</h1>
+
+    <div style="margin:30px;font-size:20px;">
+
+      姓名---{{user.username}}
+      <br>
+      年龄---{{user.age}}
+      <br>
+      地址---{{user.addr}}
+      <br>
+
+      {% for key,value in user.items %}
+       {{ forloop.first }},
+       {{ forloop.last }},
+       {{ forloop.counter0 }} --- {{key}}:{{value}}
+       <br>
+      {% endfor %}
+
+      <br><br><br>
+      {% for person in persons %}
+        {{ forloop.counter }}---{{ person }}
+
+        {% if forloop.first %} 是第一个元素 {% endif %}
+
+        {% if forloop.last %} 是最后一个元素 {% endif %}
+        <br>
+      {% empty %}
+        没有找到 persons
+      {% endfor %}
+
+      <br><br><br>
+      {{string}}
+
+    </div>
   </body>
 </html>
