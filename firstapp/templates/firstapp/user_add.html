@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>用户添加</title>
+    <style type="text/css">
+      .container{
+        margin:0 auto;
+        width:400px;
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <form  action="{% url 'user_add' %}" method="post">
+
+        {% csrf_token %}
+
+        <label for="username">用户名:</label>
+        <input type="text" name="username" value="" />
+        <br/><br/>
+
+        <label for="password">密  码:</label>
+        <input type="password" name="password" value="" />
+        <br/><br/>
+
+        <label for="age">年  龄:</label>
+        <input type="integer" name="age" value="" />
+        <br/><br/>
+
+        <input type="submit" name="添加" value="提交"/>
+      </form>
+
+    </div>
+
+  </body>
+</html>
