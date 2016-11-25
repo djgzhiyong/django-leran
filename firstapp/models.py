@@ -10,4 +10,4 @@ class UserInfo(models.Model):
     age = models.IntegerField()  # 用户年龄字段
 
     def __unicode__(self):
-        return self.userName
+        return self.username
