@@ -1,0 +1,51 @@
+{% extends 'blog/base.html' %}
+{% block title %} 注册 {% endblock %}
+{% block content %}
+
+<h2 class="center">注册</h2>
+<div class="row">
+	
+	<div class="col-xs-4 col-xs-offset-4" style="padding:20px;">
+
+		<form role="form" action="{% url 'register'%}" method="post">
+
+			{%  csrf_token %}
+		
+
+			<div class="form-group">
+				<label for="username">用户名</label>
+				<input id="username" type="text" name="username" placeholder="" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label for="passwd">密码</label>
+				<input id="passwd" type="password" name="passwd" placeholder="" class="form-control"/>
+			</div>
+
+			<div class="form-group">
+				<label for="signature">个性签名</label>
+				<textarea id="signature" type="textarea" name="signature" placeholder="" class="form-control" rows="4" >
+				</textarea>
+			</div>
+
+			<div class="form-group">
+				<label for="avatar">头像</label>
+				<input id="avatar" type="file" name="avatar" placeholder="" class="form-control" />
+			</div>
+
+			<div class="row" style="margin-top:20px;">
+				<div class="col-xs-12">
+					<button type="submit"  class="btn btn-success btn-block ">注册</button>
+				</div>
+			</div>	
+			
+		</form>
+		{%  if msg %}
+			<div class="alert-warning" role="alert" style="margin-top:10px;padding:10px;">{{msg}}</div>
+		{% endif %}
+	</div>
+
+</div>
+
+
+{% endblock %}
