@@ -1,9 +1,16 @@
 {% extends "blog/base.html" %}
 
 {% block title %} Zjump博客 {% endblock %}
+{% block titlebar %} 
+	<ul class="nav navbar-nav">
+	      <li class="active"><a href="{% url 'index' %}">首页</a></li>
+	      <li><a href="{% url 'recommend' %}">推荐</a></li>
+	      <li><a href="{% url 'my' %}">我的</a></li>
+	</ul>
+{% endblock %}
 
 {% block content %}
 
-
+<div class=""></div>
 
 {% endblock %}

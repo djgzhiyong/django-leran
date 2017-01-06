@@ -1,0 +1,27 @@
+{% extends "blog/base.html" %}
+
+{% block title %} Zjump博客-我的 {% endblock %}
+
+{% block titlebar %} 
+	<ul class="nav navbar-nav">
+	      <li ><a href="{% url 'index' %}">首页</a></li>
+	      <li ><a href="{% url 'recommend' %}">推荐</a></li>
+	      <li class="active"><a href="{% url 'my' %}">我的</a></li>
+	</ul>
+{% endblock %}
+
+{% block content %}
+
+	<div class="row">
+		
+		<div class="col-xs-10" style="background-color:pink;height:700px;">
+			
+		</div>
+
+		<div class="col-xs-2" style="background-color:yellow;height:700px;">
+				<img src="">
+		</div>
+
+	</div>
+
+{% endblock %}

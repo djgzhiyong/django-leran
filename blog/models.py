@@ -7,7 +7,8 @@ class BaseModel(models.Model):
 	create_date = models.DateTimeField(auto_now_add=True,verbose_name='创建时间')
 	update_date = models.DateTimeField(auto_now=True,verbose_name='修改时间')
 
-
+	class Meta:
+		abstract=True
 
 class UserInfo(BaseModel):
 	username = models.CharField(max_length=20,verbose_name='用户名')
